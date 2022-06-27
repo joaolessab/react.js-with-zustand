@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Zustand (State Manager) for React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="https://raw.githubusercontent.com/joaolessab/react.js-with-zustand/main/repo_media/logo.png" width="500">
+</div>
 
-## Available Scripts
+## Repository Menu
+1. [How do I run this project, João?](https://github.com/joaolessab/react.js-with-zustand#how-do-i-run-this-project-jo%C3%A3o)
+2. [What's Zustand?](https://github.com/joaolessab/react.js-with-zustand#whats-zustand)
+3. [DevTools - Redux](https://github.com/joaolessab/react.js-with-zustand#devtools---redux)
+4. [Persist data from State into Client Storage](https://github.com/joaolessab/react.js-with-zustand#persist-data-from-state-into-client-storage)
+5. [References](https://github.com/joaolessab/react.js-with-zustand#references)
 
-In the project directory, you can run:
+## How do I run this project, João?
+1. Install the package dependencies:
+```bash
+npm install
+```
 
-### `npm start`
+2. Then, run the development server:
+```bash
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the app running;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## What's Zustand?
+- It's a pretty simple and easy state manager to use in your React apps;
+- A pretty good alternative for Redux;
+- Really small pieces of code;
 
-### `npm test`
+## DevTools - Redux
+- You can manipulate and see the Zustand states live! Using a Chrome Extension and the **devtools** method provided by Zustand;
+1. Check the commits [here](https://github.com/joaolessab/react.js-with-zustand/commit/c6dc529331bc9cf4addd21d90b6ca3b954efdb51);
+2. Install the [Redux extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en);
+3. Then, you can check your browser:
+- Initial State:
+<img src="https://raw.githubusercontent.com/joaolessab/react.js-with-zustand/main/repo_media/devTools_1.png" width="600">
+- State Diff (after inserting new people):
+<img src="https://raw.githubusercontent.com/joaolessab/react.js-with-zustand/main/repo_media/devTools_2.png" width="600">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Persist data from State into Client Storage
+- You can persist data from the Zustand state in the Client local storage, using the **persist** method provided by Zustand;
+1. Check the commits [here](https://github.com/joaolessab/react.js-with-zustand/commit/3a95dc0ad8c099e5b4cc3524e9c31f73a20b08a5) and [here](https://github.com/joaolessab/react.js-with-zustand/commit/30659b4706f4d012d732576d72306abd1af7773f);
+2. Then, you can check your browser at the Application tab - dev mode:
+- **undefined** variable:
+<img src="https://raw.githubusercontent.com/joaolessab/react.js-with-zustand/main/repo_media/persist_1.png" width="600">
+- <b>user_settings</b> variable:
+<img src="https://raw.githubusercontent.com/joaolessab/react.js-with-zustand/main/repo_media/persist_2.png" width="600">
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## References
+- [Official Repo and API Docs](https://github.com/pmndrs/zustand)
+- [Creating Stores: Best Practices](https://github.com/pmndrs/zustand/wiki/Flux-inspired-practice)
+- [Splitting the store into separate slices](https://github.com/pmndrs/zustand/blob/main/docs/typescript.md#independent-slices-pattern)
+- [Medium Blog](https://medium.com/@SlashArash/zustand-yet-another-lovely-state-manager-in-react-801b6bcf21ff)
