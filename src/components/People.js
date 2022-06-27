@@ -1,8 +1,8 @@
 import React from 'react';
-import useStore from '../store';
+import { usePeopleStore } from '../store';
 
 export default function People(){
-    const people = useStore(state => state.people);
+    const people = usePeopleStore(state => state.people);
 
     return (
         <div>

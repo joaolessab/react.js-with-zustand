@@ -3,19 +3,22 @@ import { devtools, persist } from 'zustand/middleware';
 // DevTools: enables Redux extension to view our states in the browser
 // Persist: allows to persist our state in our client storage (even if we refresh the app)
 
-let store = (set) => ({
-    people: ['John Doe', 'Jane Doe'],
-    addPerson: (person) =>
-        set((state) => ({ people: [...state.people, person] })),
-
+let settingsStore = (set) => ({
     dark: false,
     toogleDarkMode: () => 
         set((state) => ({ dark: !state.dark })),
 })
 
-store = devtools(store);
-store = persist(store, { name: 'user_settings' });
+let peopleStore = (set) => ({
+    people: ['John Doe', 'Jane Doe'],
+    addPerson: (person) =>
+        set((state) => ({ people: [...state.people, person] })),
+})
 
-const useStore = create(store);
+settingsStore = devtools(settingsStore);
+settingsStore = persist(settingsStore, { name: 'user_settings' });
 
-export default useStore;
+peopleStore = devtools(peopleStore);
+
+export const useSettingStore = create(settingsStore);
+export const usePeopleStore = create(peopleStore);

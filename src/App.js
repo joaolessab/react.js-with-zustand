@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useStore from './store';
+import { useSettingStore } from './store';
 
 import People from './components/People';
 import Input from './components/Input';
@@ -8,8 +8,8 @@ import './App.css';
 
 function App() {
   // Best practice is destructuring the states, so that way, it will trigger only for the determined state that you want to modify
-  const toogleDarkMode = useStore((state) => state.toogleDarkMode);
-  const dark = useStore((state) => state.dark);
+  const toogleDarkMode = useSettingStore((state) => state.toogleDarkMode);
+  const dark = useSettingStore((state) => state.dark);
   
   useEffect(() => {
     if(dark){

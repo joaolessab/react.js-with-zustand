@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
-import useStore from '../store';
+import { usePeopleStore } from '../store';
 
 export default function Input(){
     const inputRef = useRef();
     
-    const addPerson = useStore(state => state.addPerson);
+    const addPerson = usePeopleStore(state => state.addPerson);
 
     const add = () => {
         addPerson(inputRef.current.value);
