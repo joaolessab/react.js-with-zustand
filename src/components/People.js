@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePeopleStore } from '../store';
+import usePeopleStore from '../stores/PeopleStore';
 
 export default function People(){
     const people = usePeopleStore(state => state.people);

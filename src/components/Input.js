@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { usePeopleStore } from '../store';
+import usePeopleStore from '../stores/PeopleStore';
 
 export default function Input(){
     const inputRef = useRef();
