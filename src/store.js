@@ -7,6 +7,10 @@ let store = (set) => ({
     people: ['John Doe', 'Jane Doe'],
     addPerson: (person) =>
         set((state) => ({ people: [...state.people, person] })),
+
+    dark: false,
+    toogleDarkMode: () => 
+        set((state) => ({ dark: !state.dark })),
 })
 
 store = devtools(store);
