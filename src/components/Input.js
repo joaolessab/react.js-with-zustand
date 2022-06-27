@@ -8,6 +8,7 @@ export default function Input(){
 
     const add = () => {
         addPerson(inputRef.current.value);
+        inputRef.current.value = '';
     }
 
     return (
