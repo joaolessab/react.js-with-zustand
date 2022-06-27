@@ -9,7 +9,7 @@ export default function People(){
             <p>We have {people.length} people in our store.</p>
             <ul>
                 {people.map(person => (
-                    <li>{person}</li>
+                    <li key={person}>{person}</li>
                 ))}
             </ul>
         </div>
