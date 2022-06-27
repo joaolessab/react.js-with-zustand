@@ -10,7 +10,7 @@ let store = (set) => ({
 })
 
 store = devtools(store);
-store = persist(store);
+store = persist(store, { name: 'user_settings' });
 
 const useStore = create(store);
 
