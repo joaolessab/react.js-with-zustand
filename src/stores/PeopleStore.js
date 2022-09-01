@@ -5,8 +5,17 @@ import { devtools, persist } from 'zustand/middleware';
 
 let peopleStore = (set) => ({
     people: ['John Doe', 'Jane Doe'],
+    test: {},
+
+
     addPerson: (person) =>
         set((state) => ({ people: [...state.people, person] })),
+
+    editTest: (field, value) => set((state) => {
+        const newdata = { ...state.test }
+        newdata[field] = value;
+        state.test = newdata;
+    })
 })
 
 const usePeopleStore = create(devtools(peopleStore));
